@@ -1,5 +1,5 @@
 # Escaneador de portas
-Este projeto é uma aplicação gráfica simples desenvolvida em Python usando a biblioteca `tkinter` para escanear portas abertas em um determinado host. O escaneamento é realizado utilizando `threads` para melhorar a eficiência, especialmente quando escaneando intervalos maiores de portas.
+Este projeto é uma aplicação gráfica simples desenvolvida em Python usando a biblioteca `Dear PyGui` para a interface gráfica e a biblioteca `socket` para escanear portas abertas em um determinado host.  O escaneamento é realizado utilizando `threads` para melhorar a eficiência, especialmente quando escaneando intervalos maiores de portas.
 
 ## Como Funciona
 
@@ -11,8 +11,8 @@ As portas conhecidas e seus serviços são mapeados em um dicionário no código
 
 - **`portas_bem_conhecidas`**: Um dicionário que mapeia portas bem conhecidas para seus respectivos serviços.
 - **`escanear_porta(host, porta, area_texto)`**: Função que tenta se conectar a uma porta específica em um host e atualiza a interface com o resultado.
-- **`iniciar_escanemento(host_entrada, porta_inicio_entrada, porta_fim_entrada, area_texto)`**: Função que inicia o processo de escaneamento para um intervalo de portas, utilizando `threads`.
-- **`iniciar_interface_grafica()`**: Função que configura e inicia a interface gráfica do usuário utilizando `tkinter`.
+- **`iniciar_escanemento(host_entrada, porta_inicio_entrada, porta_fim_entrada, area_texto)`**: Função que inicia o processo de escaneamento para um intervalo de portas, utilizando threads.
+- **`iniciar_interface_grafica()`**: Função que configura e inicia a interface gráfica do usuário utilizando Dear PyGui.
 
 ## Como Usar
 
