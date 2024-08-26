@@ -43,8 +43,17 @@ def iniciar_escanemento(sender, app_data, user_data):
     try:
         porta_inicio = int(dpg.get_value("start_port_input"))
         porta_fim = int(dpg.get_value("end_port_input"))
-    except ValueError:
-        dpg.add_text("Por favor, insira números de porta válidos.", parent="results_group", color=[255, 0, 0])
+
+        
+        if not (1 <= porta_inicio <= 65535 and 1 <= porta_fim <= 65535):
+            raise ValueError("As portas devem estar no intervalo de 1 a 65535.")
+
+        
+        if porta_inicio > porta_fim:
+            raise ValueError("A porta inicial deve ser menor ou igual à porta final.")
+            
+    except ValueError as e:
+        dpg.add_text(f"Erro: {str(e)}", parent="results_group", color=[255, 0, 0])
         return
 
     def escanear_intervalo():
@@ -64,7 +73,6 @@ def iniciar_escanemento(sender, app_data, user_data):
 def main():
     dpg.create_context()
 
-    
     with dpg.window(label="Scanner de Portas", width=600, height=400):
         dpg.add_text("Insira os dados para escanear as portas de um host.", color=[150, 150, 250])
 
