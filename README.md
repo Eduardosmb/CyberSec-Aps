@@ -34,8 +34,8 @@ python3 aps.py
 
 ### Entrada
 
-- **Host**: `127.0.0.1`
+- **Host**: `127.0.0.1` ou `localhost`
 - **Porta Inicial**: `20`
-- **Porta Final**: `50000`
+- **Porta Final**: `65535`
 
-![image](https://github.com/user-attachments/assets/e82a8ca9-2d48-4c52-8745-89a66a971eb0)
+![image](https://github.com/user-attachments/assets/2ab41535-c738-4058-9953-62d8f174eee7)
