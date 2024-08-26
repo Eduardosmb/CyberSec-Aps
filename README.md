@@ -19,7 +19,7 @@ As portas conhecidas e seus serviços são mapeados em um dicionário no código
 ### Requisitos
 
 - **Python 3**: Certifique-se de ter o Python 3 instalado na sua máquina.
-- **Biblioteca `tkinter`**: `tkinter`.
+- **Biblioteca `dearpygui`**: `dearpygui`.
 
 ### Clonar o Repositório
 
@@ -36,4 +36,6 @@ python3 aps.py
 
 - **Host**: `127.0.0.1`
 - **Porta Inicial**: `20`
-- **Porta Final**: `80`
+- **Porta Final**: `50000`
+
+![image](https://github.com/user-attachments/assets/e82a8ca9-2d48-4c52-8745-89a66a971eb0)
